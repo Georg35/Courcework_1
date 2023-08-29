@@ -5,7 +5,7 @@ public class Employee {
     private String fullName;
     private int department;
     private double salary;
-    private  int ID;
+    private  int id;
     private static int count = 1;
 
     public Employee(String fullName, int department, int salary) {
@@ -27,12 +27,12 @@ public class Employee {
         return salary;
     }
 
-    public int getID() {
-        return ID;
+    public int getId() {
+        return id;
     }
 
     public void setID(int ID) {
-        this.ID = ID;
+        this.id = ID;
     }
 
     public void setFullName(String fullName) {
@@ -48,7 +48,7 @@ public class Employee {
     }
 
     public String toString() {
-        return "Сотрудник - " + fullName + ", Отдел - " + department + ", Зарплата - " + salary + ", ID - " + ID;
+        return "Сотрудник - " + fullName + ", Отдел - " + department + ", Зарплата - " + salary + ", ID - " + id;
     }
 
     public static void fullEmployees(Employee[] employees) {
@@ -66,7 +66,8 @@ public class Employee {
 }
 
     public static double averageSalary(Employee[] employees) {
-        return empTotalSalary(employees) / 2;
+
+        return empTotalSalary(employees) / employees.length;
     }
 
     public static Employee empMaxSalary(Employee[] employees) {
